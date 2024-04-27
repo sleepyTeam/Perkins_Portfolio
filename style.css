@@ -1,0 +1,180 @@
+/* CSS HEX */
+:root{
+--crimson: #CF6766;
+--indigo: #30415d;
+--ultramarine: #031424;
+--lightblue: #8eaebd;
+
+}
+
+html { overflow-y: scroll; }
+body { position: absolute; }
+*{
+    overflow: hidden;
+    margin: 0%;
+    background-color: white;
+    color: var(--ultramarine);
+    
+}
+a{
+    color:var(--ultramarine);
+}
+.navbar, navbar-expand-lg bg-light{
+    margin-left: 10%;
+    margin-right: 10%;
+    color: var(--lightblue);
+    border: 4px solid var(--crimson)
+    
+}
+li{
+    color: var(--ultramarine);
+}
+h1{
+    color: var(--crimson);
+}
+#aboutMe, #projects, #contact{
+
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: justify;
+
+}
+/*h1{} elementSelector*/
+/*.secondary{} classSelector*/
+/* #id{} idSelector*/
+.row > .column {
+    padding: 0 8px;
+        margin-left: 10%;
+        margin-right: 10%;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Create four equal columns that floats next to eachother */
+  .column {
+    float: left;
+    width: 25%;
+  }
+
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--indigo);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    
+    max-width: 1200px;
+  }
+  
+  /* The Close Button */
+  .close {
+    background-color: var(--indigo);
+    color: var(--crimson);
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+    max-height: 520px;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    background-color: var(--indigo);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: var(--crimson);
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    background-color: var(--indigo);
+    color: var(--crimson);
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Caption text */
+  .caption-container {
+    text-align: center;
+    background-color: var(--indigo) !important ; 
+    padding: 2px 16px;
+    color: white;
+  }
+  #caption{
+    background-color: var(--indigo);
+    color: var(--crimson);
+  }
+  
+  img.demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
