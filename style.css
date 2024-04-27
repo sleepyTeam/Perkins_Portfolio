@@ -17,7 +17,7 @@ body { position: absolute; }
     
 }
 a{
-    color:var(--ultramarine);
+    color:var(--lightblue);
 }
 .navbar, navbar-expand-lg bg-light{
     margin-left: 10%;
@@ -32,7 +32,10 @@ li{
 h1{
     color: var(--crimson);
 }
-#aboutMe, #projects, #contact{
+h2{
+  color: var(--indigo)
+}
+#aboutMe, #projects, #contact, #title, #description, #images{
 
     padding-left: 10%;
     padding-right: 10%;
@@ -77,12 +80,11 @@ h1{
   /* Modal Content */
   .modal-content {
     position: relative;
-    background-color: #fefefe;
+    background-color: var(--indigo);
     margin: auto;
     padding: 0;
-    width: 90%;
-    
-    max-width: 1200px;
+
+    max-width: 500px;
   }
   
   /* The Close Button */
@@ -106,7 +108,10 @@ h1{
   /* Hide the slides by default */
   .mySlides {
     display: none;
-    max-height: 520px;
+    background-color: var(--indigo);
+    width: 100%;
+    align-items: center;
+    
   }
   
   /* Next & previous buttons */
@@ -161,7 +166,9 @@ h1{
     background-color: var(--indigo);
     color: var(--crimson);
   }
-  
+  .thumbnail{
+    background-color: var(--indigo);
+  }
   img.demo {
     opacity: 0.6;
   }

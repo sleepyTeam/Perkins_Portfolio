@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>        <script defer src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+        <link rel ="stylesheet" href="C:\Users\perki\Desktop\DemonKing\sleepyTeam.github.io\style.css">
+        <script >
+            function openModal() {
+                document.getElementById("myModal").style.display = "block";
+            }
+            
+            // Close the Modal
+            function closeModal() {
+                document.getElementById("myModal").style.display = "none";
+            }
+            
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+            
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                var captionText = document.getElementById("caption");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+        </script>
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Sean Perkins</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="..\index.html">About Me</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Projects</a>
+                  <ul class="dropdown-menu" >
+                      <li><a class="dropdown-item" href="dossier.html">Dungeon Dossier</a></li>
+                      <li><a class="dropdown-item" href="uncivilized.html">Uncivilized</a></li>
+                      <li><a class="dropdown-item" href="quietlife.html">Quiet Life VR</a></li>
+                  </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="..\perkins_resume.pdf">Resume</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href ='#contact'>Contact</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+      </nav>
+       <!-- Images used to open the lightbox -->
+      <div id = "title" class = container-fluid><h1>Uncivilized</h1></div>
+      <div id = "description" class = container-fluid>
+        <h2> Origins </h2>
+        <p> Uncivilized is a boardgame about anti-colonial resistance that is currently in the design phase. 
+          Originally designed for a game jam themed around the frontier. The idea for uncivilized arose as the 
+          project I had spent most of the jam working on began to feel hollow. Uncivilized represents a radical 
+          change in my approach to game design.
+          <br><br>
+          The game that I had been making for this jam, had nothing to say, it wasn't attempting to be anything more
+          than an addition to a genre. Borrowing mechanics, playstyle, and identity from the games that came before it,
+          specifically rail shooters like Star Fox. Clearly this isn't an entirely negative, imitation and emulation are powerful
+          learning tools especially as it applies to learning how to develop systems. But I was interested in designing an
+          experience not an imitation.
+          <br><br>
+          During this time I happened to be reading Jesse Schell's excellent <strong><i>"The Art of Game Design: A Book of Lenses"</strong></i>, specifically
+          it was Schell's lens of Essential Experience, As well as youtuber Spice8Rack's video <strong><a href="https://www.youtube.com/watch?v=dAksq3bCjLY"> A Very Normal Look at Tarkir</a></strong> 
+          which examines colonialism in Magic the Gathering as well as the Israel's ongoing ethnic cleansing project in Gaza. That solidified what Uncivilized ought to be.
+        </p>
+        <div id="Design Decisions">
+        <h2> Design Decisions</h2>
+          <p>Now that the game had an identity of it's own the design questions arose quickly, and their answers seemed to come just as quickly.</p>
+          <ul>
+            <li><h3> Competitive or Cooperative? </h3> </li>
+            <p> I knew that the game needed to be largely cooperative, anti-colonial resistance is only possible when those affected are working toward a shared goal.
+              I also knew that I didn't want one player taking on the role of colonizer, so the role of colonizer became an automatic function. 
+              However there was an important caveat, when anti-colonial efforts that fail, often they do so because part of the resistance betrays their neighbors in order to achieve 
+              a priviliged position within the colonizer's society. I wanted to make sure that this skewed 'self-interest' was also present in the game.
+            </p>
+            <li><h3> Difficulty </h3> </li>
+            <p> Difficulty was a question that also had a simple answer, in real life anti-colonial efforts are David vs Goliath endeavors. I also wanted to make sure that imperialist
+              tropes weren't recreated here. <strong> Colonization efforts aren't 'wars', they are genocidal projects</strong> , and the weapons of choice aren't firearms. They are destruction of food sources,
+              disruption of indigenous life styles and ecosystems, polution, poison, disease, and denial of resources. </p>
+            <li><h3> Goals </h3> </li>
+            <p> Part of hammering in the fact that anti-colonial struggle is an all-or-nothing ordeal, in order for all players to win they must work together. In game this takes the form of building 
+              a series of roads that connect the capitals of each indigenous nation. Failure to connect the nations before the 'blight' (ecological destruction caused by colonizers) reaches any of the capitals is the only
+              total win condition. There are ways that individual players can earn a self interest victory by successfully sabotaging the efforts of the other players.
+            </p>
+          </ul>
+        </div>
+      </div>
+      <div class="row" id="images"><h2>Images</h2>
+          <div class="col-sm-4">
+            <img src="../Images/uncivilized/desertCapital.png" width="250px" height="250px" onclick="openModal();currentSlide(1)" class="hover-shadow img-fluid">
+          </div>
+          <div class="col-sm-4">
+            <img src="../Images/uncivilized/mountainCapital.png" width="250px" height="250px" onclick="openModal();currentSlide(2)" class="hover-shadow img-fluid">
+          </div>
+          <div class="col-sm-4">
+            <img src="../Images/uncivilized/waterfrontCapital.png" width="250px" height="250px" onclick="openModal();currentSlide(3)" class="hover-shadow img-fluid">
+          </div>
+      </div>
+      
+      <!-- The Modal/Lightbox -->
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+      
+          <div class="mySlides">
+            <div class="numbertext">1 / 3</div>
+            <img src="../Images/uncivilized/desertCapital.png" class="img-fluid" >
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">2 / 3</div>
+            <img src="../Images/uncivilized/mountainCapital.png" class="img-fluid">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">3 / 3</div>
+            <img src="../Images/uncivilized/waterfrontCapital.png" class="img-fluid" >
+          </div>
+      
+          <!-- Next/previous controls -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+          <!-- Caption text -->
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+      
+          <div class='row'> 
+            <div class="col-sm-4 thumbnail">
+            <img class="demo" src="../Images/uncivilized/desertCapital.png" width="100%" height="150px" onclick="currentSlide(1)" alt="Desert Capital Tile">
+          </div>
+      
+          <div class="col-sm-4 thumbnail">
+            <img class="demo" src="../Images/uncivilized/mountainCapital.png" width="100%" height="150px" onclick="currentSlide(2)" alt="Mountain Capital Tile">
+          </div>
+      
+          <div class="col-sm-4 thumbnail">
+            <img class="demo" src="../Images/uncivilized/waterfrontCapital.png" width="100%" height="150px" onclick="currentSlide(3)" alt="Waterfront Capital Tile">
+          </div></div>
+          <!-- Thumbnail image controls -->
+        
+      
+        </div>
+      </div>
+    </body>
