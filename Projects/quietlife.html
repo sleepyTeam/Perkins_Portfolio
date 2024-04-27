@@ -50,57 +50,78 @@
     </head>
     <body>
       <nav class="navbar navbar-expand-lg bg-light">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">Sean Perkins</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="..\index.html">About Me</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Projects</a>
-                  <ul class="dropdown-menu" >
-                      <li><a class="dropdown-item" href="dossier.html">Dungeon Dossier</a></li>
-                      <li><a class="dropdown-item" href="uncivilized.html">Uncivilized</a></li>
-                      <li><a class="dropdown-item" href="quietlife.html">Quiet Life VR</a></li>
-                  </ul>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="..\perkins_resume.pdf">Resume</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href ='#contact'>Contact</a>
-                      </li>
-              </ul>
-            </div>
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">Sean Perkins</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html#aboutMe">About Me</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Projects
+                </a>
+                <ul class="dropdown-menu" >
+                  <li><a class="dropdown-item" href="dossier.html">Dungeon Dossier</a></li>
+                  <li><a class="dropdown-item" href="uncivilized.html">Uncivilized</a></li>
+                  <li><a class="dropdown-item" href="quietlife.html">Quiet Life VR</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="perkins_resume.pdf">Resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href ='../index.html#contact'>Contact</a>
+              </li>
+            </ul>
           </div>
+        </div>
       </nav>
        <!-- Images used to open the lightbox -->
       <div id = "title" class = container-fluid><h1>Quiet Life</h1></div>
-      <div id = "description" class = container-fluid>
-        <p>Dungeon Dossier is currently in the design process and hasn't yet entered the development cycle. But that doesn't mean there isn't plenty to discuss. 
-          Dungeon Dossier arose after playing World of Warcraft for the first time. I was stunned by how tedious I found the game. The moment-to-moment gameplay to me was sluggish, 
-          almost entirely devoid of challenge, and if anything felt like it was disrespecting the time that I was putting into the game. Progress felt entirely artificial, and there was no way to meaningfully improve at the game, I don't think I played the game for more than
-          a single week. After that initial experience I asked friends to tell me what they enjoyed about the game. The answers they gave were interesting and unexpected, they were more interested in optimizing their stats and load-outs
-          than they were in the moment-to-moment gameplay. Additionally players found the relaxed pace, conducive to feeling like they were part of a world. Needless to say I disagreed with
-          them but it did raise an interesting question. Can you create a game wherein players have no agency beyond equipping gear and distrubiting stat points, and will that game actually
-          be fun.</p>
+      <div id = "description" class = container-fluid><h2>Origins</h2>
+        <p>Quiet Life was my take on the farming sim genre, transposed into VR. The game was made as part of my junior year
+          in college, and my first fully 3D game was also expected to be first and foremost a VR Experience. Every aspect, from code, design, 3D modeling, 
+          music, and sounds, were my own work. While the game is rough around the edges I still believe there's quite a bit here to be proud of.
+          <br><br>
+          Quiet Life began as a puzzle game, inspired by other VR puzzle experiences like "The Last Clockwinder" and "The Witness" which itself wasn't designed for VR, but translates beautifully. 
+          Ultimately the puzzle game I had been making was shelved, there was a short list of reasons why, for one more than half of my classmates at the time were also making first person puzzle games,
+          . Second I was well aware that designing puzzles well is challenging enough in 2 dimensions, adding a third was something I was unsure of my ability to do successfully. Finally attempting to 
+          fully exploit the VR control scheme in the context of a puzzle game simply layered on the complexity.
+          <br><br>
+          Ultimately Quiet Life as a farming game emerged as both a pragmatic attempt to manage scope, and as an opportunity to explore the systems that had such an impact on me in the various 
+          Harvest Moon games that I'd played as a child.</p>
+        <h3>Design Challenges and Decisions</h2>
+        <p> If I were to point at a particular weak point of Quiet Life it would be the game design. Quiet Life in the form that it ultimately took had very little to say.
+          Quiet Life takes no perspective, the essential experience is underdeveloped, and the game loop is one dimensional. It's more of a demonstration of the underlying systems than it
+          is a game. If I were to revisit Quiet Life I would place more of an emphasis on creating a meditative experience, I would also implement a system where players are able to decorate
+          their farm so that each player's experience gradually becomes more and more personal.
+        </p>
+        <h3>Technical Features</h3>
+        <ul>
+          <li> An extensible system that allows for rapid implementation of new types of crop.</li>
+          <li>A three part system for crop management.<ul>
+            <li>A crop manager which tracks the development of all the crops on the farm by a centralized script.</li>
+            <li>A plot script which tracks it's contents and state, such as fertilized, watered, etc.</li>
+            <li>A crop script which provides the crop manager with information on the particular crop's development cycle. Such as time to maturation, 
+              references to the models so that they can be swapped when appropriate, sale values and so on.</li></li></ul>
+          <li>Simple and extensible livestock AI using a finite state machine</li>
+        </ul>
       </div>
-      <div class="row" id="images">
-          <div class="col-sm-4">
-            <img src="C:\Users\sean.perkins\Desktop\SP-Portfolio\clown.jpg" width="100%" onclick="openModal();currentSlide(1)" class="hover-shadow">
-          </div>
-          <div class="col-sm-4">
-            <img src="C:\Users\sean.perkins\Desktop\SP-Portfolio\cow.jpg" width="100%" onclick="openModal();currentSlide(2)" class="hover-shadow">
-          </div>
-          <div class="col-sm-4">
-            <img src="C:\Users\sean.perkins\Desktop\SP-Portfolio\guy.jpg" width="100%" onclick="openModal();currentSlide(3)" class="hover-shadow">
-          </div>
-      </div>
+      <div class="row" id="images"><h3>Images</h2>
+        <div class="col-sm-4">
+          <img src="../Images/quietlife/chicken.png" width="250px" height="250px" onclick="openModal();currentSlide(1)" class="hover-shadow img-fluid">
+        </div>
+        <div class="col-sm-4">
+          <img src="../Images/quietlife/Cows.png" width="250px" height="250px" onclick="openModal();currentSlide(2)" class="hover-shadow img-fluid">
+        </div>
+        <div class="col-sm-4">
+          <img src="../Images/quietlife/pig.png" width="250px" height="250px" onclick="openModal();currentSlide(3)" class="hover-shadow img-fluid">
+        </div>
+    </div>
       
       <!-- The Modal/Lightbox -->
       <div id="myModal" class="modal">
@@ -108,18 +129,18 @@
         <div class="modal-content">
       
           <div class="mySlides">
-            <div class="numbertext">1 / 4</div>
-            <img src="C:\Users\sean.perkins\Desktop\SP-Portfolio\clown.jpg" class="img-fluid" style="width:100%;height: auto;"  >
+            <div class="numbertext">1 / 3</div>
+            <img src="../Images/quietlife/chicken.png" class="img-fluid"  >
           </div>
       
           <div class="mySlides">
-            <div class="numbertext">2 / 4</div>
-            <img src="C:\Users\sean.perkins\Desktop\SP-Portfolio\cow.jpg" class="img-fluid" style="width:100%;height: auto;">
+            <div class="numbertext">2 / 3</div>
+            <img src="../Images/quietlife/Cows.png" class="img-fluid" >
           </div>
       
           <div class="mySlides">
-            <div class="numbertext">3 / 4</div>
-            <img src="C:\Users\sean.perkins\Desktop\SP-Portfolio\guy.jpg" class="img-fluid" style="width:100%;height: auto;" >
+            <div class="numbertext">3 / 3</div>
+            <img src="../Images/quietlife/pig.png" class="img-fluid" >
           </div>
       
           <!-- Next/previous controls -->
@@ -132,16 +153,16 @@
           </div>
       
           <div class='row'> 
-            <div class="col-sm-4">
-            <img class="demo" src="C:\Users\sean.perkins\Desktop\SP-Portfolio\clown.jpg" width="100%" height="150px" onclick="currentSlide(1)" alt="Nature">
+            <div class="col-sm-4 thumbnail">
+            <img class="demo" src="../Images/quietlife/chicken.png" width="100%" height="150px" onclick="currentSlide(1)" alt="Chicken">
           </div>
       
-          <div class="col-sm-4">
-            <img class="demo" src="C:\Users\sean.perkins\Desktop\SP-Portfolio\cow.jpg" width="100%" height="150px" onclick="currentSlide(2)" alt="Snow">
+          <div class="col-sm-4 thumbnail">
+            <img class="demo" src="../Images/quietlife/Cows.png" width="100%" height="150px" onclick="currentSlide(2)" alt="Cow and Calf">
           </div>
       
-          <div class="col-sm-4">
-            <img class="demo" src="C:\Users\sean.perkins\Desktop\SP-Portfolio\guy.jpg" width="100%" height="150px" onclick="currentSlide(3)" alt="Mountains">
+          <div class="col-sm-4 thumbnail">
+            <img class="demo" src="../Images/quietlife/pig.png" width="100%" height="150px" onclick="currentSlide(3)" alt="Pig 3D Model">
           </div></div>
           <!-- Thumbnail image controls -->
         
