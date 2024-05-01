@@ -4,11 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://kit.fontawesome.com/67e4664c7d.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <link rel ="stylesheet" href="style.css">
     </head>
     <body>
+      <content>
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
               <a class="navbar-brand" href="index.html">Sean Perkins</a>
@@ -25,7 +27,7 @@
                       Projects
                     </a>
                     <ul class="dropdown-menu" >
-                      <li><a class="dropdown-item" href="Projects\dossier.html">Dungeon Dossier</a></li>
+                      <li><a class="dropdown-item" href="Projects\godsGrave.html">Gods Grave</a></li>
                       <li><a class="dropdown-item" href="Projects\uncivilized.html">Uncivilized</a></li>
                       <li><a class="dropdown-item" href="Projects\quietlife.html">Quiet Life VR</a></li>
                     </ul>
@@ -42,13 +44,20 @@
           </nav>
 
           <div id = "aboutMe" class="container-fluid">
-            <h1> Hey there. Welcome </h1>
-            <p>I'm Sean Perkins, I'm a game designer and developer from Boise, ID. Since I was a child games have been incredibly important to me, and I started designing
-                them when I was about six years old. I started out making my own Pokemon cards on the family computer, then moved on to making horrible boardgames that my grandparents
-                graciously played with me. I knew what I wanted to do, long before I had any idea how to do it. <br><br>
-                Now 25 years and several detours later I've found my way back to games design. This site serves as a central hub where I can share the projects that I've worked on over the years.
-                As well as a space where I can explore and share what I've learned from these experiences. I like to think of it as part blog, part dev log, part philosophical treatise.
-            </p>
+            <div class = "row">
+              <div class="col-sm-4"><img src="Images/Headshot.jpg" width=70% style="display: block; margin-left: auto;margin-right: auto;" class="rounded float-left"  class="img-fluid"></div>
+              <div class="col-sm-8"><h1> Hey there. Welcome </h1>
+                <p>I'm Sean Perkins, I'm a game designer and developer from Boise, ID. Since I was a child games have been incredibly important to me, and I started designing
+                    them when I was about six years old. I started out making my own Pokemon cards on the family computer, then moved on to making horrible boardgames that my grandparents
+                    graciously played with me. I knew what I wanted to do, long before I had any idea how to do it. <br>
+                    <br>
+
+                    <br>
+                    Now 25 years and several detours later I've found my way back to games design. This site serves as a central hub where I can share the projects that I've worked on over the years.
+                    As well as a space where I can explore and share what I've learned from these experiences. I like to think of it as part blog, part dev log, part philosophical treatise.
+                </p></div>
+            </div>
+            
           </div>
           <div id="projects" class="container-fluid">
             <h1> Projects </h1>
@@ -56,13 +65,12 @@
             <div class="container">
                 <div class="row">
                     <div class ="col-sm-4">
-                        <h3><a href="Projects/dossier.html">Dungeon Dossier</h3></a>
-                        <div class ="thumbnail">
-                          <a href="Projects/dossier.html"><img src="guy.jpg" width="100%" height="200px"  class="img-fluid"></a>  
+                        <h3><a href="Projects/godsGrave.html">Gods Grave</h3></a>
+                        <div>
+                          <a href="Projects/godsGrave.html"><img src="Images/godsGrave/emperor2.5x3.5.png" style=" display: block; margin-left: auto; margin-right: auto; width: 50%;height:50%;"  class="img-fluid"></a>  
                         </div>
                         <div class ="caption">
-                          <p> Dungeon Dossier is an auto-battler inspired by slay the spire, darkest dungeon, and DND. The player takes on the role of a middle manager
-                            in an adventuring guild. Planning expeditions into the dungeon and managing your hirelings stats, and gear, while having no direct control of their actions.
+                          <p> Gods Grave is a digital card game currently in development, inspired by Devil's Tower National Monument. It's a game about myth and culture, and how tiny bits of our history are lost every day.
                           </p>
                         </div>
                         
@@ -70,14 +78,14 @@
                     <div class ="col-sm-4">
                         <a href="Projects/uncivilized.html"><h3>Uncivilized</h3></a>
                         <a href="Projects/uncivilized.html"><img src="Images/uncivilized/map.png" width="100%" height="100%" class="img-fluid"></a>
-                        <p> Uncivilized is a boardgame about anti-colonial struggle, In short it's settler's of catan from the perspective of the people who were there first.</p>
+                        <p> Uncivilized is a boardgame about anti-colonial struggle, In short it's "Settler's of Catan" from the perspective of the people who were there first.</p>
                     </div>
                     <div class ="col-sm-4">
-                      <div class = "thumbnail">
+                      <div>
                         <a href="Projects/quietlife.html"><h3>Quiet Life VR</h3></a>
                         <a href="Projects/quietlife.html"><img src="Images/quietlife/painting.png" alt ="Digital Landscape Painting" style="width: 100%" class="img-fluid"></a>
                         <div class="caption">
-                          <p> Quiet Life is a VR farming experience, inspired by harvest moon and stardew valley. The goal was to bring the farming sim into a new perspective.</p>
+                          <p> Quiet Life is a VR farming experience, inspired by "Harvest Moon" and "Stardew Valley". The goal was to bring the farming sim into a new perspective.</p>
                         </div>
                       </div>
                        
@@ -96,5 +104,6 @@
             </p>
 
           </div>
+      </content>
     </body>
 </html>
